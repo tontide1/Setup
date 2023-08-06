@@ -1,0 +1,22 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"A File Icon",
+		"AdvancedNewFile",
+		"Agila Theme",
+		"BracketHighlighter",
+		"C++ Completions",
+		"Monokai - Spacegray",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeLinter-cppcheck",
+		"Terminal",
+		"Terminus",
+		"Theme - Soda",
+		"Theme - Spacegray",
+	],
+}

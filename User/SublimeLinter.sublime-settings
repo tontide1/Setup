@@ -1,0 +1,14 @@
+// SublimeLinter Settings - User
+{
+	// "debug": true,
+	
+	"linters": {
+		"cppcheck": {
+        "@disable": false,
+        "args": [],
+        "enable": "style",
+        "excludes": [],
+        "std": ["c++11"]
+	}
+}
+}

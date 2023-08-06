@@ -1,0 +1,43 @@
+{
+	"theme": "Adaptive.sublime-theme",
+  	"color_scheme": "Packages/Agila Theme/Markdown/Oceanic Next Markdown.tmTheme",
+	"font_face": "JetBrains Mono",
+	"font_options":
+	[
+    "gray_antialias",
+    "subpixel_antialias",
+    "dlig"
+	],
+	"font_size": 12,
+	"line_padding_top": 1,
+	"auto_indent": true,
+	"smart_indent": true,
+	"indent_to_bracket": true,
+	"save_on_focus_lost": true,
+	"vintage_ctrl_keys": true,
+	"hardware_acceleration": "none",
+	"auto_complete_delay": 50,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"minimap": false,
+	"word_wrap": "true",
+	"indent_guide_options": ["draw_normal", "draw_active"],
+	"translate_tabs_to_spaces": true,
+	"highlight_modified_tabs": true,
+	"highlight_line": true,
+	"caret_style": "solid",
+	"caret_extra_top": 1,
+	"caret_extra_bottom": 1,
+	"caret_extra_width": 2,
+	"popup_shadows": false,
+	"file_tab_style": "rounded",
+	"tree_animation_enabled": true,
+	"animation_enabled": true,
+	"show_tab_close_buttons": false,
+	"remember_layout": true,
+	"themed_title_bar": true,
+	"show_full_path": false,
+	"overlay_scroll_bars": "enabled",
+}
