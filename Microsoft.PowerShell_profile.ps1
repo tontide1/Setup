@@ -9,9 +9,9 @@ if ($host.Name -eq 'ConsoleHost')
 }
 
 
-Import-Module -Name Terminal-Icons
+oh-my-posh init pwsh --config C:\Users\tontide1\AppData\Local\Programs\oh-my-posh\themes\jandedobbeleer.omp.json | Invoke-Expression
 
-oh-my-posh init pwsh --config C:\Users\tontide1\AppData\Local\Programs\oh-my-posh\themes\zash.omp.json | Invoke-Expression
+Import-Module -Name Terminal-Icons
 
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
