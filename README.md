@@ -6,6 +6,8 @@
   - Brave
   - Vscode
   - Sublime text 4
+  - SQL sever
+  - UltraViewer
   - Discord
   - Zalo
   - Iobit uninstaller
