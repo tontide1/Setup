@@ -22,7 +22,7 @@
 8. Powerlevel10k
 
 ## Cài các phần mềm cần thiết
-  - Brave
+  - Edge
   - Vscode
   - Sublime text 4
   - SQL sever
@@ -32,7 +32,7 @@
   - Iobit uninstaller
   - Hwmonitor
   - BleachBit
-  - IDM
+  - Neat downloader
   - FX Sound
   - Foxit PDF Reader
   - Office 365
