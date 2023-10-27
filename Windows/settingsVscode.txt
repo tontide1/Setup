@@ -47,5 +47,12 @@
     "window.commandCenter": false,
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "editor.fontWeight": "normal",
-    "workbench.colorTheme": "Monokai Vibrant"
+    "window.title": "${appName}",
+    "window.titleBarStyle": "custom",
+    "window.titleSeparator": "",
+    "C_Cpp.default.cppStandard": "c++17",
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.colorTheme": "One Dark Darker",
+    "editor.formatOnType": true,
+    "beautify.onSave": true
 }
