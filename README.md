@@ -22,7 +22,7 @@
 8. Powerlevel10k
 
 ## Cài các phần mềm cần thiết
-  - Edge
+  - Thorinum
   - Vscode
   - Sublime text 4
   - SQL sever
