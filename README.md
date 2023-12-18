@@ -1,6 +1,6 @@
 # Guide insWindows
 
-1. Update driver (Dirver nvidia cài riêng)
+1. Update driver (Dirver VGA cài riêng)
 2. C/C++ AOI và .Net
 4. Tối ưu windows
   - [Chris tool ulity](https://github.com/ChrisTitusTech/winutil)
