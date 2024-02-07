@@ -38,3 +38,5 @@
   - Office 365
   - Git
   - Java
+  - Docker
+  - WSL
