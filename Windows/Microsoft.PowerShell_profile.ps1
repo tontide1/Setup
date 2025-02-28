@@ -1,22 +1,41 @@
+if ($env:TERM_PROGRAM -ne 'vscode') {
+    $ProgressPreference = 'SilentlyContinue'
+    $ErrorActionPreference = 'Continue'
+}
+
 # set PowerShell to UTF-8
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
+Import-Module -Name Terminal-Icons
+Import-Module PSReadLine        
+
 
 #Module
-Import-Module -Name Terminal-Icons
-
-oh-my-posh init pwsh --config C:\Users\tontide1\scoop\apps\oh-my-posh\19.8.3\themes\tontide1.omp.json | Invoke-Expression
-
-# Alias
-Set-Alias j 'C:\Users\tontide1\AppData\Local\Programs\Python\Python311\Scripts\jupyter-notebook.exe'
-Set-Alias subl 'C:\Program Files\Sublime Text\subl.exe'
-Set-Alias ll ls
-Set-Alias my Set-MyData
-
-# Utilities
-function which ($command) {
-  Get-Command -Name $command -ErrorAction SilentlyContinue |
-    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+Set-PSReadLineOption -PredictionSource History
+oh-my-posh init pwsh --config C:\Users\tontide1\scoop\apps\oh-my-posh\24.5.1\themes\tontide1.omp.json | Invoke-Expression
+# Invoke-Expression (&starship init powershell)
+# Custom utilities
+function Update-Profile { 
+    & $PROFILE.CurrentUserAllHosts
+    Write-Host "Profile reloaded!" -f green 
 }
-function Set-MyData {
-    Set-Location 'C:\Users\tontide1\Desktop\Data'
+
+Set-Alias -Name up -Value Update-Profile
+
+# Security settings
+Set-PSReadLineOption -HistorySaveStyle SaveIncrementally
+Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+Set-PSReadLineOption -AddToHistoryHandler {
+    param($command)
+    return $command -notmatch '^(ssh|mstsc|password)\s+'
+}
+
+# Smart tab completion
+Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
+
+# Git integration
+if (Get-Command git -ErrorAction SilentlyContinue) {
+    $env:GIT_ASKPASS = ""
+    $env:GIT_TERMINAL_PROMPT = 1
 }
