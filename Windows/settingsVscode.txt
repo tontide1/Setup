@@ -1,167 +1,141 @@
 {
-  "files.autoSave": "afterDelay",
+  // Font và cấu hình giao diện
   "editor.fontSize": 15,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontWeight": "normal",
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.fontFamily": "CaskaydiaMono Nerd Font Mono",
+  // Cải thiện trải nghiệm cuộn và hiển thị
   "workbench.list.smoothScrolling": true,
   "terminal.integrated.smoothScrolling": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.smoothScrolling": true,
-  "editor.fontLigatures": false,
-  "indentRainbow.indicatorStyle": "light",
-  "indentRainbow.lightIndicatorStyleLineWidth": 1,
-  "indentRainbow.ignoreLinePatterns": [
-      "/[ \t]* [*]/g",
-      "/[ \t]+[/]{2}/g"
+  "editor.wordWrap": "on",
+  // Python-specific settings
+  "python.formatting.provider": "black",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.defaultInterpreterPath": "python",
+  "python.terminal.activateEnvironment": true,
+  // Jupyter
+  "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  "jupyter.askForKernelRestart": false,
+  "jupyter.enablePlotViewer": true,
+  "jupyter.enableCellCodeLens": true,
+  "jupyter.themeMatplotlibPlots": true,
+  "jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
   ],
-  "explorer.confirmDelete": false,
+  "notebook.lineNumbers": "on",
+  "notebook.output.wordWrap": true,
+  "notebook.consolidatedRunButton": true,
+  // Data Science extensions settings
+  "csv-preview.separator": ",",
+  "csv-preview.resizeColumns": true,
+  "csv-preview.formatValues": "auto",
+  // Editor settings
+  "editor.cursorBlinking": "phase",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.autoClosingBrackets": "always",
+  "editor.autoClosingQuotes": "always",
+  "editor.autoIndent": "advanced",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.suggestSelection": "first",
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.showStatusBar": true,
+  "editor.inlineSuggest.enabled": true,
+  // Git
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true
+  },
+  // Terminal
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.mouseWheelZoom": true,
+  "terminal.integrated.shellIntegration.enabled": true,
+  // File operations
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.ipynb_checkpoints": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/*.pyc": true
+  },
+  // Performance
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/.ipynb_checkpoints": true,
+    "**/__pycache__": true,
+    "**/dist": true,
+    "**/build": true
+  },
+  // Code runner
   "code-runner.clearPreviousOutput": true,
   "code-runner.runInTerminal": true,
-  "code-runner.showExecutionMessage": false,
-  "code-runner.showRunCommandInEditorContextMenu": false,
-  "code-runner.showRunCommandInExplorerContextMenu": false,
-  "code-runner.showRunIconInEditorTitleMenu": false,
-  "code-runner.showStopIconInEditorTitleMenu": false,
-  "update.enableWindowsBackgroundUpdates": false,
-  "extensions.autoCheckUpdates": false,
-  "editor.mouseWheelZoom": true,
-  "debug.terminal.clearBeforeReusing": true,
-  "terminal.explorerKind": "external",
-  "cmake.configureOnOpen": true,
   "code-runner.saveFileBeforeRun": true,
-  "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
-  "c-cpp-compile-run.should-show-notifications": false,
-  "c-cpp-compile-run.run-in-external-terminal": true,
-  "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe",
-  "terminal.sourceControlRepositoriesKind": "external",
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
-  "terminal.integrated.shellArgs.windows": "-nologo",
-  "terminal.integrated.shellIntegration.enabled": false,
-  "terminal.integrated.enableMultiLinePasteWarning": "always",
-  "editor.fontWeight": "normal",
-  "window.title": "${separator}",
-  "window.titleBarStyle": "custom",
-  "window.titleSeparator": "",
-  "C_Cpp.default.cppStandard": "c++17",
-  "security.workspace.trust.untrustedFiles": "open",
-  "editor.formatOnType": true,
-  "extensions.autoUpdate": false,
-  "terminal.integrated.defaultProfile.windows": "PowerShell",
-  "code-runner.languageIdToFileExtensionMap": {
-      "bat": ".bat",
-      "powershell": ".ps1",
-      "typescript": ".ts"
-  },
-  "extensions.ignoreRecommendations": true,
-  "editor.acceptSuggestionOnCommitCharacter": false,
-  "redhat.telemetry.enabled": false, // auto complete
-  "notebook.lineNumbers": "on",
-  "terminal.integrated.gpuAcceleration": "on",
-  "terminal.integrated.mouseWheelZoom": true,
   "code-runner.executorMap": {
-      "javascript": "node",
-      "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
-      "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-      "zig": "zig run",
-      "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-      "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-      "php": "php",
-      "python": "python -u",
-      "perl": "perl",
-      "perl6": "perl6",
-      "ruby": "ruby",
-      "go": "go run",
-      "lua": "lua",
-      "groovy": "groovy",
-      "powershell": "powershell -ExecutionPolicy ByPass -File",
-      "bat": "cmd /c",
-      "shellscript": "bash",
-      "fsharp": "fsi",
-      "csharp": "scriptcs",
-      "vbscript": "cscript //Nologo",
-      "typescript": "ts-node",
-      "coffeescript": "coffee",
-      "scala": "scala",
-      "swift": "swift",
-      "julia": "julia",
-      "crystal": "crystal",
-      "ocaml": "ocaml",
-      "r": "Rscript",
-      "applescript": "osascript",
-      "clojure": "lein exec",
-      "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
-      "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
-      "racket": "racket",
-      "scheme": "csi -script",
-      "ahk": "autohotkey",
-      "autoit": "autoit3",
-      "dart": "dart",
-      "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
-      "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
-      "haskell": "runghc",
-      "nim": "nim compile --verbosity:0 --hints:off --run",
-      "lisp": "sbcl --script",
-      "kit": "kitc --run",
-      "v": "v run",
-      "sass": "sass --style expanded",
-      "scss": "scss --style expanded",
-      "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
-      "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-      "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-      "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-      "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
-      "sml": "cd $dir && sml $fileName",
-      "mojo": "mojo run"
+    "python": "python -u"
   },
-  "editor.minimap.enabled": false,
-  "editor.cursorBlinking": "phase",
+  // Extensions
+  "workbench.iconTheme": "material-icon-theme",
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "extensions.ignoreRecommendations": false,
+  // Workspace
   "workbench.startupEditor": "none",
-  "jupyter.askForKernelRestart": false,
-    /** ------------ Workbench Settings ------------ **/
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook",
+    "*.csv": "csv-preview.csvPreview",
+    "*.pdf": "pdf.preview"
+  },
+  // Appearance
   "workbench.colorCustomizations": {
-  "inlineparameters.annotationBackground": "#282A3600",
-  "inlineparameters.annotationForeground": "#7b82af",
-  "scrollbar.shadow": "#24292e00",
-  "workbench.tree.indent": 16,
-},
-"workbench.iconTheme": "material-icon-theme",
-"git.autofetch": true,
-"github.copilot.editor.enableAutoCompletions": false,
-"notebook.consolidatedRunButton": true,
-"notebook.formatOnSave.enabled": true,
-"notebook.output.wordWrap": true,
-"tabnine.experimentalAutoImports": true,
-"editor.fontFamily": "Jetbrains Mono",
-"window.menuBarVisibility": "compact",
-"window.commandCenter": false,
-"workbench.layoutControl.enabled": false,
-"github.copilot.enable": {
-  "*": false,
-  "plaintext": false,
-  "markdown": false,
-  "scminput": false
-},
-"github.copilot.chat.scopeSelection": true,
-"github.copilot.advanced": {
-  
-},
-"terminal.external.windowsExec": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-"liveServer.settings.donotShowInfoMsg": true,
-"workbench.editorAssociations": {
-  "*.copilotmd": "vscode.markdown.preview.editor",
-  "*.pdf": "pdf.preview"
-},
-"liveServer.settings.donotVerifyTags": true,
-"editor.wordWrap": "on",
-"editor.autoClosingBrackets": "always",
-"editor.autoClosingComments": "always",
-"editor.autoClosingDelete": "always",
-"editor.autoClosingOvertype": "always",
-"editor.linkedEditing": true,
-"powershell.codeFormatting.autoCorrectAliases": true,
-"terminal.integrated.fontSize": 13,
-"gitlens.advanced.messages": {
-  "suppressLineUncommittedWarning": true
-},
-"editor.autoClosingQuotes": "always",
-"window.autoDetectColorScheme": true,
+    "editorIndentGuide.activeBackground": "#707070",
+    "inlineparameters.annotationBackground": "#282A3600",
+    "inlineparameters.annotationForeground": "#7b82af"
+  },
+  // Python docstring generator
+  "autoDocstring.docstringFormat": "numpy",
+  "autoDocstring.generateDocstringOnEnter": true,
+  // Mô phỏng dữ liệu và trực quan hóa
+  "plotly.enablePlotlyDownload": true,
+  // Linting và PEP8
+  "python.linting.flake8Args": [
+    "--max-line-length=100",
+    "--ignore=E203,W503"
+  ],
+  "python.linting.pylintArgs": [
+    "--disable=C0111"
+  ],
+  // Black formatter
+  "python.formatting.blackArgs": [
+    "--line-length=100"
+  ],
+  // Cài đặt typing
+  "python.analysis.completeFunctionParens": true,
+  // Import sorting
+  "python.sortImports.args": [
+    "--profile",
+    "black"
+  ]
 }
