@@ -3,6 +3,8 @@ if ($env:TERM_PROGRAM -ne 'vscode') {
     $ErrorActionPreference = 'Continue'
 }
 
+$Env:_CE_M = $null
+$Env:_CE_CONDA = $null
 # set PowerShell to UTF-8
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 Import-Module -Name Terminal-Icons
@@ -12,12 +14,20 @@ Import-Module PSReadLine
 #Module
 Set-PSReadLineOption -PredictionSource History
 oh-my-posh init pwsh --config C:\Users\tontide1\scoop\apps\oh-my-posh\24.5.1\themes\tontide1.omp.json | Invoke-Expression
-# Invoke-Expression (&starship init powershell)
+
 # Custom utilities
 function Update-Profile { 
     & $PROFILE.CurrentUserAllHosts
     Write-Host "Profile reloaded!" -f green 
 }
+
+function open {
+    param(
+        [string]$path = "."
+    )
+    Start-Process explorer $path
+}
+
 
 Set-Alias -Name up -Value Update-Profile
 
