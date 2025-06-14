@@ -10,11 +10,10 @@ $Env:_CE_CONDA = $null
 Import-Module -Name Terminal-Icons
 Import-Module PSReadLine        
 
-
 #Module
 Set-PSReadLineOption -PredictionSource History
-oh-my-posh init pwsh --config C:\Users\tontide1\scoop\apps\oh-my-posh\24.5.1\themes\tontide1.omp.json | Invoke-Expression
-
+Set-PSReadLineOption -PredictionViewStyle ListView
+oh-my-posh init pwsh --config C:\Users\tontide1\scoop\apps\oh-my-posh\current\themes\tontide1.omp.json | Invoke-Expression
 # Custom utilities
 function Update-Profile { 
     & $PROFILE.CurrentUserAllHosts
